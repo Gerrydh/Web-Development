@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Club Finances</title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+	<div id="myDiv"></div>
+</body>
+</html>
+<script>
+
+var MoneyRaised = [4000, 5000, 6000, 9000, 15000, 21000];
+
+let svgContainer = d3.select("#myDiv").append("svg")
+	.attr("height", 50)
+	.attr("width", 50);
+
+let circles = svgContainer.selectAll("circe")
+	.data(MoneyRaised);
+	
+circles.enter()
+	.append("circle")		
+		.attr("cx", function(d, i) {return 50 + (i*50);})
+		.attr("cy", 50)
+		.attr("r", function(d) {return d;})
+		.attr("fill", "red")
+		
+
+
+</script>
