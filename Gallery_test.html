@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+
+.example1 {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.example1 h3 {
+ font-size: 3em;
+ color: red;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}
+
+
+<!--end-->
+body {
+  font-family: Verdana, sans-serif;
+  margin: 100;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.portrait {
+    height: 300px;
+    width: 400px;
+}
+
+.landscape {
+    height: 400px;
+    width: 2000px;
+}
+
+.square {
+    height: 400px;
+    width: 400px;
+}
+
+</style>
+
+
+<body>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+
+<nav class="w3-bar w3-red">
+  <a href="Index.html" class="w3-button w3-bar-item">Home Team</a>
+  <a href="Gallery_test.html" class="w3-button w3-bar-item">Gallery</a>
+  <a href="SeasonStats.html" class="w3-button w3-bar-item">Season Stats</a>
+  <a href="Contact.html" class="w3-button w3-bar-item">Registration</a>
+  <a href="login.html" class="w3-button w3-bar-item">Login</a>
+</nav>
+
+<div class="example1">
+<h3>A Selection of Images From This Season </h3>
+</div>
+
+<h2 style="text-align:center">Team Snaps</h2>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+<img src="Images/Photo.jpg" style="height:200px;width:300px" class="center">
+
+<p>
+Here are some pictures of the team this season, as you can see everyone is having a great time and looking forward to next season
+</p>
+<br>
+  <div class="column">
+    <img src="Images/Crest.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 10</div>
+      <img src="Images/Crest.jpg" style="width:100%;height:600px;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 10</div>
+      <img src="Images/Pic2.jpg" style="width:100%;height:600px">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 10</div>
+      <img src="Images/Pic3.jpg" style="width:100%;height:800px">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 10</div>
+      <img src="Images/Goof.jpg" style="width:100%;height:500px">
+	  
+    </div>
+	 <div class="mySlides">
+      <div class="numbertext">5 / 10</div>
+      <img src="Images/Pic1.jpg" style="width:100%;height:600px">
+    </div>
+	
+	 <div class="mySlides">
+      <div class="numbertext">6 / 10</div>
+      <img src="Images/Away.jpg" style="width:100%">
+    </div>
+	
+	 <div class="mySlides">
+      <div class="numbertext">7 / 10</div>
+      <img src="Images/Payday.jpg" style="width:100%;height:600px">
+    </div>
+	
+	 <div class="mySlides">
+      <div class="numbertext">8 / 10</div>
+      <img src="Images/Training.jpg" style="width:100%;height:600px">
+    </div>
+	
+	 <div class="mySlides">
+      <div class="numbertext">9 / 10</div>
+      <img src="Images/Training2.jpg" style="width:100%;height:600px">
+    </div>
+	
+	 <div class="mySlides">
+      <div class="numbertext">10 / 10</div>
+      <img src="Images/Pic5.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+	<div class="img">
+      <img class="demo cursor" src="Images/Crest.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Badge">
+    </div>
+	<div class="column">
+	<div class="img">
+      <img class="demo cursor" src="Images/Pic2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Captain Fantastic">
+    </div>
+	<div class="column">
+	<div class="img">
+      <img class="demo cursor" src="Images/Pic3.jpg" style="width:100%" onclick="currentSlide(1)" alt="Ryan- We keep telling him he can't play with the big stick!">
+    </div>
+	<div class="column">
+	<div class="img">
+      <img class="demo cursor" src="Images/Goof.jpg" style="width:100%" onclick="currentSlide(1)" alt="Goofin around with the team manager">
+    </div>
+	<div class="column">
+	<div class="img">
+      <img class="demo cursor" src="Images/Pic1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Mo Hanlinio.....running down the wing">
+    </div>
+	<div class="column">
+	<div class="img">
+      <img class="demo cursor" src="Images/Away.jpg" style="width:100%" onclick="currentSlide(1)" alt="Away match">
+    </div>
+	<div class="column">
+	<div class="img">
+      <img class="demo cursor" src="Images/Payday.jpg" style="width:100%" onclick="currentSlide(1)" alt="The money makes all the effort worthwhile">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/Training.jpg" style="width:100%" onclick="currentSlide(2)" alt="Getting stuck in during a hard training sesion">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/Training2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Setting up for training">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/Pic5.jpg" style="width:100%" onclick="currentSlide(4)" alt="Ice bath after a hard match">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
