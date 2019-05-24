@@ -58,12 +58,13 @@ img.avatar {
   padding: 16px;
 }
 
+/* no of columns to span */
 span.psw {
   float: right;
   padding-top: 16px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
+/* Change styles for span of columns and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
      display: block;
@@ -87,24 +88,28 @@ span.psw {
 
 <h2>Login Form</h2>
 
+<!--pulls the imgcontainer detailed above-->
 <form action="/action_page.php">
   <div class="imgcontainer">
     <img src="Images/Stats.jpg" alt="Avatar" class="avatar">
   </div>
 
+<!-- Label for the username and password and makes it a requirement -->
   <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
-	
+
+<!-- Enter a valid email address, this will be checked to validate and it is a requirement -->
 	<form>
 		<label for="email"><b>Enter Valid Email Address</b></label>
 		<br>
 		<input type="email" placeholder="Enter email address" name="email" required>
 	</form>
-        
+
+<!-- Create a submit button and the checkbox will display when checked if invalid email address entered -->
     <button type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
