@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <body>
 
-<!-- Navigation -->
+<!-- Navigation Menu bar -->
 <nav class="w3-bar w3-red">
   <a href="Index.html" class="w3-button w3-bar-item">Home Team</a>
   <a href="Gallery_test.html" class="w3-button w3-bar-item">Gallery</a>
@@ -16,11 +16,12 @@
 
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+/* body of the page to have the below attrributes and display a box border*/
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
+/* create a input text box */
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -31,7 +32,7 @@ input[type=text], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-
+/* create a submit button with these attributes */
 input[type=submit] {
   background-color: #ffb3b3;
   color: white;
@@ -45,6 +46,7 @@ input[type=submit]:hover {
   background-color: #ffb3b3;
 }
 
+/* assign the container- the background color and border elements and padding 20 pixels */
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -54,22 +56,29 @@ input[type=submit]:hover {
 </head>
 <body>
 
+<!-- heading -->
 <h3>Child Registration Form</h3>
 
+<!-- assign the elements from the container elements -->
 <div class="container">
+
+<!-- Defines the action to be performed when submitted -->
   <form action="/action_page.php">
+<!-- Sets the label and set the type of input to text, text to be displayed when page is run -->
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Players first name..">
 
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="Players last name..">
 	<br>
-	
+
+<!-- create a date element (calendar) for the date of birth -->
 	<label for="dob">Date of Birth</label>
 	<input type="date">
 	<br>
 	<br>
-	
+
+<!-- Create a drop menu for the position -->
     <label for="Position">Position</label>
     <select id="Position" name="Position">
       <option value="goalkeeper">Goalkeeper</option>
@@ -78,9 +87,11 @@ input[type=submit]:hover {
 	  <option value="striker">Striker</option>
     </select>
 
+<!-- Create an a box to enter any other information -->
     <label for="subject">Any other information</label>
     <textarea id="subject" name="subject" placeholder="Please inform us of any other relevant information regarding your child.." style="height:100px"></textarea>
 
+<!-- Create a submit button -->
     <input type="submit" value="Submit">
   </form>
 </div>
